@@ -58,5 +58,5 @@ spec:
           config:
             storage:
               consul:
-                address: "consul:8500"
+                address: "consul-server:8500"
                 path: "vault"
