@@ -74,7 +74,7 @@ spec:
       - type: kubernetes
         roles:
           - name: default
-            bound_service_account_names: ["default"]
+            bound_service_account_names: ["default", "vault-webhook-vault-secrets-webhook"]
             bound_service_account_namespaces: ["*"]
             policies: ["allow_secrets"]
             ttl: 0
