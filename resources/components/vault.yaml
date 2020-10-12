@@ -1,0 +1,60 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: vault
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: consul
+  namespace: kube-system
+  annotations:
+    argocd.argoproj.io/sync-wave: "-5"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  syncPolicy:
+    automated:
+      prune: true
+  destination:
+    namespace: vault
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: .
+    repoURL: https://github.com/hashicorp/consul-helm.git
+    targetRevision: v0.24.1
+    helm:
+      values: |
+        global:
+          name: consul
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: vault
+  namespace: kube-system
+  annotations:
+    argocd.argoproj.io/sync-wave: "-4"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  syncPolicy:
+    automated:
+      prune: true
+  destination:
+    namespace: vault
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: charts/vault
+    repoURL: https://github.com/banzaicloud/bank-vaults.git
+    targetRevision: chart/vault/1.6.0
+    helm:
+      values: |
+        vault:
+          config:
+            storage:
+              consul:
+                address: "consul:8500"
+                path: "vault"
