@@ -69,6 +69,10 @@ spec:
         rules: path "secret/*" {
           capabilities = ["create", "read", "update", "delete", "list"]
           }
+      - name: demo_secrets
+        rules: path "secret/demo" {
+          capabilities = ["create", "read", "update", "delete", "list"]
+          }
 
     auth:
       - type: kubernetes
@@ -76,7 +80,7 @@ spec:
           - name: default
             bound_service_account_names: ["default", "vault-webhook-vault-secrets-webhook"]
             bound_service_account_namespaces: ["*"]
-            policies: ["allow_secrets"]
+            policies: ["allow_secrets", "demo_secrets"]
             ttl: 0
 
     secrets:
