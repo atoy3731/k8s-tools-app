@@ -41,14 +41,11 @@ spec:
 
   etcdVersion: "3.3.17"
 
-  # Annotations to be applied to the POD Specs
-  etcdPodAnnotations:
-    backup.velero.io/backup-volumes: "YOUR_VOLUME_NAME"
-
   # Support for distributing the generated CA certificate Secret to other namespaces.
   # Define a list of namespaces or use ["*"] for all namespaces.
   caNamespaces:
     - "demo-app"
+    - "default"
 
   # Describe where you would like to store the Vault unseal keys and root token.
   unsealConfig:
