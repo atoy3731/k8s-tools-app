@@ -60,3 +60,13 @@ spec:
               consul:
                 address: "consul-server:8500"
                 path: "vault"
+        unsealer:
+            args:
+              [
+                "--mode",
+                "k8s",
+                "--k8s-secret-namespace",
+                "vault",
+                "--k8s-secret-name",
+                "bank-vaults",
+              ]
