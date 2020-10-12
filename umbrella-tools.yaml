@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: umbrella-app
+  name: umbrella-tools
   namespace: kube-system
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: resources/
+    path: resources/tools/
     repoURL: https://github.com/alterus-io/demo-app.git
     targetRevision: master
   syncPolicy:

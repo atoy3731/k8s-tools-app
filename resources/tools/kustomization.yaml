@@ -2,4 +2,3 @@ resources:
   - components/vault-operator.yaml
   - components/vault-impl.yaml
   - components/vault-webhook.yaml
-#  - components/hello-world.yaml
