@@ -1,0 +1,3 @@
+resources:
+  - resources/rbac.yaml
+  - resources/cr-etcd-ha.yaml

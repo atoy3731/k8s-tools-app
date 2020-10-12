@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: vault
+  namespace: kube-system
+  annotations:
+    argocd.argoproj.io/sync-wave: "-3"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  syncPolicy:
+    automated:
+      prune: true
+  destination:
+    namespace: vault
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: charts/vault-secrets-webhook
+    repoURL: https://github.com/banzaicloud/bank-vaults.git
+    targetRevision: chart/vault/1.6.0
