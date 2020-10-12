@@ -15,9 +15,6 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  syncPolicy:
-    automated:
-      prune: true
   destination:
     namespace: vault
     server: https://kubernetes.default.svc
@@ -33,3 +30,7 @@ spec:
           etcdOperator:
             commandArgs:
               cluster-wide: true
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

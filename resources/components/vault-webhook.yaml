@@ -8,9 +8,6 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  syncPolicy:
-    automated:
-      prune: true
   destination:
     namespace: vault
     server: https://kubernetes.default.svc
@@ -19,3 +16,7 @@ spec:
     path: charts/vault-secrets-webhook
     repoURL: https://github.com/banzaicloud/bank-vaults.git
     targetRevision: master
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
