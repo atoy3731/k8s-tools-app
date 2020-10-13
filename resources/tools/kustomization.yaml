@@ -1,4 +1,6 @@
 resources:
-  - components/vault-operator.yaml
-  - components/vault-impl.yaml
-  - components/vault-webhook.yaml
+  - resources/vault-operator.yaml
+  - resources/vault-impl.yaml
+  - resources/vault-webhook.yaml
+  - resources/cert-manager-crds.yaml
+  - resources/cert-manager.yaml

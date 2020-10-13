@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cert-manager
+  annotations:
+    argocd.argoproj.io/sync-wave: "-4"
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cert-manager
+  namespace: kube-system
+  annotations:
+    argocd.argoproj.io/sync-wave: "-4"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: cert-manager
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: deploy/charts/cert-manager
+    repoURL: https://github.com/jetstack/cert-manager.git
+    targetRevision: v0.15.0
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
