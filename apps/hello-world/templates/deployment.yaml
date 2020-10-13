@@ -28,6 +28,13 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+          - name: DEMO_SECRET
+          {{- if .Values.vault.enabled }}
+            value: vault:secret/data/demo/app#DEMO_SECRET
+          {{- else }}
+            value: VAULT_DISABLED
+          {{- end }}
           ports:
             - name: http
               containerPort: 8000
