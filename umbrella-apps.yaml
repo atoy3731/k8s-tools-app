@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: umbrella-tools
+  name: umbrella-apps
   namespace: kube-system
   finalizers:
   - resources-finalizer.argocd.argoproj.io
