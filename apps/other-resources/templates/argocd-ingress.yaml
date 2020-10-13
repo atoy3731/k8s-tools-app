@@ -5,6 +5,9 @@ metadata:
   namespace: kube-system
   annotations:
     cert-manager.io/cluster-issuer: demo-issuer
+    {{- if .Values.httpsRedirect }}
+    traefik.ingress.kubernetes.io/redirect-entry-point: https
+    {{- end }}
 spec:
   rules:
     - host: {{ .Values.argoHost }}

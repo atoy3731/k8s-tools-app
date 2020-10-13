@@ -29,6 +29,7 @@ spec:
         ingress:
           annotations:
             cert-manager.io/cluster-issuer: demo-issuer
+            traefik.ingress.kubernetes.io/redirect-entry-point: https
           hosts:
             - host: app.demo.alterus.io
           tls:
