@@ -143,3 +143,12 @@ That should kick off another umbrella app that will contain a single sub-applica
 If you want to see the source of the application, it is [here](https://github.com/alterus-io/hello-world)
 
 Its Kubernetes manifets are [here](https://github.com/alterus-io/hello-world-manifests)
+
+### Anything Else?
+
+These are on my road-map for other things to add to this:
+
+* Istio Service Mesh
+* ELK Stack
+
+I'm open to suggestions!
