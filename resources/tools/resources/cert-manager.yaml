@@ -22,17 +22,17 @@ spec:
   source:
     path: "deploy/charts/cert-manager"
     repoURL: "https://github.com/jetstack/cert-manager.git"
-    targetRevision: "v0.15.0"
+    targetRevision: "v0.16.1"
     helm:
       values: |
         cainjector:
           image:
-            tag: "v0.15.0"
+            tag: "v0.16.1"
         webhook:
           image:
-            tag: "v0.15.0"
+            tag: "v0.16.1"
         image:
-          tag: "v0.15.0"
+          tag: "v0.16.1"
   syncPolicy:
     automated:
       prune: true
