@@ -26,6 +26,7 @@ spec:
     helm:
       values: |
         hostname: "rancher.demo.alterus.io"
+        rancherImageTag: "v2.4.8"
   syncPolicy:
     automated:
       prune: true
