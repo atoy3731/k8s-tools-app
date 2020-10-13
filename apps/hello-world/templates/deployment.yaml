@@ -15,7 +15,7 @@ spec:
       annotations:
         vault.security.banzaicloud.io/vault-addr: {{ .Values.vault.url | quote }}
         vault.security.banzaicloud.io/vault-role: {{ .Values.vault.role | quote }}
-        vault.security.banzaicloud.io/vault-tls-secret: {{ .Values.vault.tlsName | quote }}
+        vault.security.banzaicloud.io/vault-skip-verify: "true"
       {{- end }}
       labels:
         {{- include "test-deployment.selectorLabels" . | nindent 8 }}
