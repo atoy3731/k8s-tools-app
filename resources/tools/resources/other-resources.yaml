@@ -16,6 +16,10 @@ spec:
     path: apps/other-resources
     repoURL: https://github.com/alterus-io/demo-app.git
     targetRevision: master
+    helm:
+      values: |
+        argoHost: "argo.demo.alterus.io"
+        issuerEmail: "adam@alterus.io"
   syncPolicy:
     automated:
       prune: true

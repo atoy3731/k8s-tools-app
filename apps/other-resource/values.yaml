@@ -1,0 +1,8 @@
+# Set this to your argo host
+argoHost: argo.example.com
+
+# Set this to the name of the desired TLS secret for Argo.
+argocdTlsSecret: tls-argo-ingress
+
+# Set this to the email of your cluster issuer
+issuerEmail: john.doe@example.com

@@ -1,0 +1,1 @@
+You now have a ClusterIssuer and ArgoCD ingress at {{ .Values.argoHost }}!

@@ -1,2 +1,2 @@
 resources:
-  - components/hello-world.yaml
+  - resources/hello-world.yaml
