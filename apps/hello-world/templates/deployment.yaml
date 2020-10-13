@@ -31,7 +31,7 @@ spec:
           env:
           - name: DEMO_SECRET
           {{- if .Values.vault.enabled }}
-            value: vault:secret/data/demo/app#DEMO_SECRET
+            value: vault:secret/data/demo#DEMO_SECRET
           {{- else }}
             value: VAULT_DISABLED
           {{- end }}
