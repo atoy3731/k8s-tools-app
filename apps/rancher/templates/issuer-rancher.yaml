@@ -1,7 +1,7 @@
 {{- if eq .Values.tls "ingress" -}}
   {{- if eq .Values.ingress.tls.source "rancher" -}}
     {{- $certmanagerVer :=  split "." .Values.certmanager.version -}}
-apiVersion: cert-manager.io/v1
+apiVersion: cert-manager.k8s.io/v1
 kind: Issuer
 metadata:
   name: {{ template "rancher.fullname" . }}
