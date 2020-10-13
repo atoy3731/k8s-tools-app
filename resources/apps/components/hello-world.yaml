@@ -17,7 +17,7 @@ spec:
   destination:
     namespace: demo-app
     server: https://kubernetes.default.svc
-  project: default
+  project: apps
   source:
     path: apps/hello-world
     repoURL: https://github.com/alterus-io/demo-app.git

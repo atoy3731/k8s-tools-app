@@ -11,7 +11,7 @@ spec:
   destination:
     namespace: kube-system
     server: https://kubernetes.default.svc
-  project: default
+  project: tools
   source:
     path: apps/cert-manager-crds
     repoURL: https://github.com/alterus-io/demo-app.git

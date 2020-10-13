@@ -11,7 +11,7 @@ spec:
   destination:
     namespace: vault
     server: https://kubernetes.default.svc
-  project: default
+  project: tools
   source:
     path: charts/vault-secrets-webhook
     repoURL: https://github.com/banzaicloud/bank-vaults.git

@@ -18,7 +18,7 @@ spec:
   destination:
     namespace: cert-manager
     server: https://kubernetes.default.svc
-  project: default
+  project: tools
   source:
     path: "deploy/charts/cert-manager"
     repoURL: "https://github.com/jetstack/cert-manager.git"

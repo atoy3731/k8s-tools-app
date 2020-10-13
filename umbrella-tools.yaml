@@ -1,4 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: tools
+  namespace: kube-system
+  # Finalizer that ensures that project is not deleted until it is not referenced by any application
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  description: Tools Project
+---
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: umbrella-tools
@@ -9,7 +20,7 @@ spec:
   destination:
     namespace: kube-system
     server: https://kubernetes.default.svc
-  project: default
+  project: tools
   source:
     path: resources/tools/
     repoURL: https://github.com/alterus-io/demo-app.git

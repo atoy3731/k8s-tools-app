@@ -18,7 +18,7 @@ spec:
   destination:
     namespace: cattle-system
     server: https://kubernetes.default.svc
-  project: default
+  project: tools
   source:
     path: apps/rancher
     repoURL: https://github.com/alterus-io/demo-app.git
