@@ -29,6 +29,8 @@ spec:
         value: "rancher.demo.alterus.io"
       - name: "rancherImageTag"
         value: "v2.5.1"
+      - name: "tls"
+        value: "external"
   syncPolicy:
     automated:
       prune: true
