@@ -22,11 +22,11 @@ spec:
   source:
     path: "chart"
     repoURL: "https://github.com/rancher/rancher.git"
-    targetRevision: "v2.4.8"
+    targetRevision: "v2.5.1"
     helm:
       values: |
         hostname: "rancher.demo.alterus.io"
-        rancherImageTag: "v2.4.8"
+        rancherImageTag: "v2.5.1"
   syncPolicy:
     automated:
       prune: true
