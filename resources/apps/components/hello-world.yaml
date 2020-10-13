@@ -21,8 +21,8 @@ spec:
     server: https://kubernetes.default.svc
   project: apps
   source:
-    path: apps/hello-world
-    repoURL: https://github.com/alterus-io/demo-app.git
+    path: .
+    repoURL: https://github.com/alterus-io/hello-world-manifests.git
     targetRevision: master
     helm:
       values: |
