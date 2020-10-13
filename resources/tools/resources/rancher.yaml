@@ -24,13 +24,17 @@ spec:
     repoURL: https://github.com/alterus-io/demo-app.git
     targetRevision: master
     helm:
-      parameters:
-      - name: "hostname"
-        value: "rancher.demo.alterus.io"
-      - name: "rancherImageTag"
-        value: "v2.5.1"
-      - name: "tls"
-        value: "external"
+      values: |
+        hostname: "rancher.demo.alterus.io"
+        rancherImageTag: "v2.4.8"
+        ingress:
+          tls:
+            source: letsEncrypt
+        letsEncrypt:
+          email: atoy3731@gmail.com
+          environment: staging
+          ingress:
+            class: "traefik"
   syncPolicy:
     automated:
       prune: true
