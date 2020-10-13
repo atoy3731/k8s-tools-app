@@ -4,4 +4,4 @@ resources:
   - resources/vault-webhook.yaml
   - resources/cert-manager-crds.yaml
   - resources/cert-manager.yaml
-  - resources/rancher.yaml
+#  - resources/rancher.yaml
