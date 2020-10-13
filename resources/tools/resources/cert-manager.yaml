@@ -20,9 +20,9 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: deploy/charts/cert-manager
-    repoURL: https://github.com/jetstack/cert-manager.git
-    targetRevision: v0.15.0
+    path: "deploy/charts/cert-manager"
+    repoURL: "https://github.com/jetstack/cert-manager.git"
+    targetRevision: "v0.15.0"
   syncPolicy:
     automated:
       prune: true
