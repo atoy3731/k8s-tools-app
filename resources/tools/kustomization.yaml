@@ -5,3 +5,4 @@ resources:
   - resources/cert-manager-crds.yaml
   - resources/cert-manager.yaml
   - resources/rancher.yaml
+  - resources/other-resources.yaml
