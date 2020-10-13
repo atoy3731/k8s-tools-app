@@ -29,11 +29,11 @@ spec:
           image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-          - name: DEMO_SECRET
           {{- if .Values.vault.enabled }}
+          - name: VAULT_ENABLED
+            value: "true"
+          - name: DEMO_SECRET
             value: vault:secret/data/demo#DEMO_SECRET
-          {{- else }}
-            value: VAULT_DISABLED
           {{- end }}
           ports:
             - name: http
