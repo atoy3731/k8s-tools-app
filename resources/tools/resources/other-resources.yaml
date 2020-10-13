@@ -14,7 +14,7 @@ spec:
   project: tools
   source:
     path: apps/other-resources
-    repoURL: https://github.com/alterus-io/demo-app.git
+    repoURL: https://github.com/alterus-io/k8s-tools-app.git
     targetRevision: master
     helm:
       values: |

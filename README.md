@@ -26,13 +26,13 @@ Within that file, you'll see this snippet:
 ```yaml
   source:
     path: resources/tools/
-    repoURL: https://github.com/alterus-io/demo-app.git
+    repoURL: https://github.com/alterus-io/k8s-tools-app.git
     targetRevision: master
 ```
 
 What this is telling ArgoCD is:
 
-1. Use the `https://github.com/alterus-io/demo-app.git` git repository.
+1. Use the `https://github.com/alterus-io/k8s-tools-app.git` git repository.
 2. Check out the `master` branch.
 3. Go to the `resources/tools` directory.
 
@@ -74,7 +74,7 @@ Since cert-manager's sync wave (`-4`) is lesser than rancher's (`-3`), it will d
 
 This repo is set up for a demo, so you'll need to do the following to make it work for you:
 
-1. If you've forked/cloned this repository, you'll need to do a global find/replace for `https://github.com/alterus-io/demo-app.git` and change it to your new repository.
+1. If you've forked/cloned this repository, you'll need to do a global find/replace for `https://github.com/alterus-io/k8s-tools-app.git` and change it to your new repository.
 
 2. If this is exposed to the world via a domain you own, you'll need to make a wildcard CNAME DNS entry to point to the AWS ELB hostname that was created from your `aws-k8s-terraform` cluster.
 
