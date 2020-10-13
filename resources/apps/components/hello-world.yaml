@@ -29,7 +29,6 @@ spec:
         ingress:
           annotations:
             cert-manager.io/cluster-issuer: demo-issuer
-            cert-manager.io/issuer-kind: Issuer
           hosts:
             - host: app.demo.alterus.io
           tls:
