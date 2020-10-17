@@ -31,7 +31,7 @@ spec:
   project: tools
   source:
     path: resources/tools/
-    repoURL: https://github.com/alterus-io/k8s-tools-app.git
+    repoURL: https://github.com/atoy3731/k8s-tools-app.git
     targetRevision: master
   syncPolicy:
     automated:

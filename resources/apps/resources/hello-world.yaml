@@ -22,7 +22,7 @@ spec:
   project: apps
   source:
     path: .
-    repoURL: https://github.com/alterus-io/hello-world-manifests.git
+    repoURL: https://github.com/atoy3731/hello-world-manifests.git
     targetRevision: master
     helm:
       values: |

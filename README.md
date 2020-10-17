@@ -15,7 +15,7 @@ This repository assumes you already have the following installed:
 * Kubectl CLI
 * Vault CLI
 
-Please reference the [aws-k8s-terraform](https://github.com/alterus-io/aws-k8s-terraform) project to spin up an entire functioning K3S cluster onto AWS with ArgoCD using Terraform.
+Please reference the [aws-k8s-terraform](https://github.com/atoy3731/aws-k8s-terraform) project to spin up an entire functioning K3S cluster onto AWS with ArgoCD using Terraform.
 
 ### What is All This Stuff?
 
@@ -26,13 +26,13 @@ Within that file, you'll see this snippet:
 ```yaml
   source:
     path: resources/tools/
-    repoURL: https://github.com/alterus-io/k8s-tools-app.git
+    repoURL: https://github.com/atoy3731/k8s-tools-app.git
     targetRevision: master
 ```
 
 What this is telling ArgoCD is:
 
-1. Use the `https://github.com/alterus-io/k8s-tools-app.git` git repository.
+1. Use the `https://github.com/atoy3731/k8s-tools-app.git` git repository.
 2. Check out the `master` branch.
 3. Go to the `resources/tools` directory.
 
@@ -74,7 +74,7 @@ Since cert-manager's sync wave (`-4`) is lesser than rancher's (`-3`), it will d
 
 This repo is set up for a demo, so you'll need to do the following to make it work for you:
 
-1. If you've forked/cloned this repository, you'll need to do a global find/replace for `https://github.com/alterus-io/k8s-tools-app.git` and change it to your new repository.
+1. If you've forked/cloned this repository, you'll need to do a global find/replace for `https://github.com/atoy3731/k8s-tools-app.git` and change it to your new repository.
 
 2. If this is exposed to the world via a domain you own, you'll need to make a wildcard CNAME DNS entry to point to the AWS ELB hostname that was created from your `aws-k8s-terraform` cluster.
 
@@ -140,9 +140,9 @@ kubectl apply -f umbrella-apps.yaml
 
 That should kick off another umbrella app that will contain a single sub-application. It is a Python application that will output the above Vault secret to its logs and show you the hostname/IP of the pod in the browser.
 
-If you want to see the source of the application, it is [here](https://github.com/alterus-io/hello-world)
+If you want to see the source of the application, it is [here](https://github.com/atoy3731/hello-world)
 
-Its Kubernetes manifets are [here](https://github.com/alterus-io/hello-world-manifests)
+Its Kubernetes manifets are [here](https://github.com/atoy3731/hello-world-manifests)
 
 ### Anything Else?
 
