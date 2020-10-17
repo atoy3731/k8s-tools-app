@@ -78,11 +78,11 @@ This repo is set up for a demo, so you'll need to do the following to make it wo
 
 2. If this is exposed to the world via a domain you own, you'll need to make a wildcard CNAME DNS entry to point to the AWS ELB hostname that was created from your `aws-k8s-terraform` cluster.
 
-   For instance, I have `*.demo.alterus.io` pointing to `a1ec6aaa9d97d4774975811481c12472-959947491.us-east-1.elb.amazonaws.com`. This will route all traffic to Kubernetes and let the Traefik ingress controller route based on the incoming hostname.
+   For instance, I have `*.demo.atoy.dev` pointing to `a1ec6aaa9d97d4774975811481c12472-959947491.us-east-1.elb.amazonaws.com`. This will route all traffic to Kubernetes and let the Traefik ingress controller route based on the incoming hostname.
    
 3. In `resources/tools/resources/other-resources.yaml`, change the `argoHost` and `issuerEmail` to your domain name and email.
 
-4. In `resources/apps/resources/hello-world.yaml`, change the 2 references to `app.demo.alterus.io` to your domain. 
+4. In `resources/apps/resources/hello-world.yaml`, change the 2 references to `app.demo.atoy.dev` to your domain. 
     
 Now you're ready to deploy! Run the following command:
 
@@ -90,7 +90,7 @@ Now you're ready to deploy! Run the following command:
 kubectl apply -f umbrella-tools.yaml
 ```
 
-And Ta-Da, your entire cluster should be provisioning.  It will take a minute or two for the ArgoCD ingress to provision, but assuming things are set up, you should be able to navigate to it. For me, I go to http://argo.demo.alterus.io
+And Ta-Da, your entire cluster should be provisioning.  It will take a minute or two for the ArgoCD ingress to provision, but assuming things are set up, you should be able to navigate to it. For me, I go to http://argo.demo.atoy.dev
 
 **NOTE:** If you don't have a domain that you own and still want to see ArgoCD, you can run the following:
 

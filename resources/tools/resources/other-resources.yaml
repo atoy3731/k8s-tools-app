@@ -18,8 +18,8 @@ spec:
     targetRevision: master
     helm:
       values: |
-        argoHost: "argo.demo.alterus.io"
-        issuerEmail: "adam@alterus.io"
+        argoHost: "argo.demo.atoy.dev"
+        issuerEmail: "adam@atoy.dev"
   syncPolicy:
     automated:
       prune: true
