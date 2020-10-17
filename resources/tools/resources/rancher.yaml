@@ -31,7 +31,7 @@ spec:
           tls:
             source: letsEncrypt
         letsEncrypt:
-          email: atoy3731@gmail.com
+          email: adam@alterus.io
           environment: staging
           ingress:
             class: "traefik"

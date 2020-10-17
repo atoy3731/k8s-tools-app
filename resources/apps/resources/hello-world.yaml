@@ -26,6 +26,8 @@ spec:
     targetRevision: master
     helm:
       values: |
+        replicaCount: 5
+
         ingress:
           annotations:
             cert-manager.io/cluster-issuer: demo-issuer
