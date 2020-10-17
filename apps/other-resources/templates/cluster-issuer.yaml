@@ -7,7 +7,9 @@ spec:
   acme:
     email: {{ .Values.issuerEmail }}
     privateKeySecretRef:
-      name: letsencrypt-staging
+      name: letsencrypt-secret
+    # CAUTION: Uncomment and use the production server only when you're stable. You risk hitting your rate limit otherwise.
+    # server: https://acme-v02.api.letsencrypt.org/directory
     server: https://acme-staging-v02.api.letsencrypt.org/directory
     solvers:
     - http01:
