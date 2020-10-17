@@ -140,9 +140,9 @@ kubectl apply -f umbrella-apps.yaml
 
 That should kick off another umbrella app that will contain a single sub-application. It is a Python application that will output the above Vault secret to its logs and show you the hostname/IP of the pod in the browser.
 
-If you want to see the source of the application, it is [here](https://github.com/atoy3731/hello-world)
+If you want to see the source of the application, it is [here](https://github.com/atoy3731/hello-world-app)
 
-Its Kubernetes manifets are [here](https://github.com/atoy3731/hello-world-manifests)
+Its Kubernetes manifests are [here](https://github.com/atoy3731/hello-world-manifests)
 
 ### Anything Else?
 
