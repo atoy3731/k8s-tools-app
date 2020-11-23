@@ -4,5 +4,6 @@ resources:
   - resources/vault-webhook.yaml
   - resources/cert-manager-crds.yaml
   - resources/cert-manager.yaml
-  - resources/rancher.yaml
+  - resources/jenkins.yaml
+  - resources/sonarqube.yaml
   - resources/other-resources.yaml

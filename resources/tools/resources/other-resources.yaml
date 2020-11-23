@@ -18,8 +18,10 @@ spec:
     targetRevision: master
     helm:
       values: |
-        argoHost: "argo.demo.atoy.dev"
         issuerEmail: "adam@atoy.dev"
+        argoHost: "argo.demo.atoy.dev"
+        jenkinsHost: "jenkins.demo.atoy.dev"
+        sonarqubeHost: "sonarqube.demo.atoy.dev"     
   syncPolicy:
     automated:
       prune: true

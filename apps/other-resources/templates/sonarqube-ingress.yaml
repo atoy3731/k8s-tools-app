@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: argocd-ingress
+  name: sonarqube-ingress
   namespace: kube-system
   annotations:
     cert-manager.io/cluster-issuer: demo-issuer
@@ -10,16 +10,16 @@ metadata:
     {{- end }}
 spec:
   rules:
-    - host: {{ .Values.argoHost }}
+    - host: {{ .Values.sonarqubeHost }}
       http:
         paths:
           - path: /
             backend:
-              serviceName: {{ .Values.argoService.name }}
-              servicePort: {{ .Values.argoService.port }}
+              serviceName: {{ .Values.sonarqubeService.name }}
+              servicePort: {{ .Values.sonarqubeService.port }}
   tls:
   - hosts:
-    - {{ .Values.argoHost }}
-    secretName: {{ .Values.argoTlsSecret }}
+    - {{ .Values.sonarqubeHost }}
+    secretName: {{ .Values.sonarqubeTlsSecret }}
 
 

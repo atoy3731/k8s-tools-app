@@ -1,10 +1,22 @@
-# Set this to your argo host
-argoHost: argo.example.com
-
-# Set this to the name of the desired TLS secret for Argo.
-argoTlsSecret: tls-argo-ingress
-
 # Set this to the email of your cluster issuer
 issuerEmail: john.doe@example.com
 
 httpsRedirect: true
+
+argoHost: argo.example.com
+argoTlsSecret: tls-argo-ingress
+argoService: 
+  name: argocd-server
+  port: 80
+
+jenkinsHost: jenkins.example.com
+jenkinsTlsSecret: tls-jenkins-ingress
+jenkinsService: 
+  name: jenkins
+  port: 8080
+
+sonarqubeHost: sonarqube.example.com
+sonarqubeTlsSecret: tls-sonarqube-ingress
+sonarqubeService:
+  name: sonarqube
+  port: 9000
