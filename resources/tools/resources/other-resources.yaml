@@ -15,7 +15,7 @@ spec:
   source:
     path: apps/other-resources
     repoURL: https://github.com/atoy3731/k8s-tools-app.git
-    targetRevision: master
+    targetRevision: itc
     helm:
       values: |
         issuerEmail: "adam@atoy.dev"

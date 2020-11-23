@@ -32,7 +32,7 @@ spec:
   source:
     path: resources/tools/
     repoURL: https://github.com/atoy3731/k8s-tools-app.git
-    targetRevision: master
+    targetRevision: itc
   syncPolicy:
     automated:
       prune: true

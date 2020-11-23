@@ -22,7 +22,7 @@ spec:
   source:
     path: apps/rancher
     repoURL: https://github.com/atoy3731/k8s-tools-app.git
-    targetRevision: master
+    targetRevision: itc
     helm:
       values: |
         hostname: "rancher.demo.atoy.dev"
